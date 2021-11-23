@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Mulish', sans-serif;
+    margin:0;
+    overflow: hidden;
+    background-color: black;
+}
+.btn-ripple{
+    font-size: 14px;
+    background-color: royalblue;
+    color: #fff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding:20px 30px;
+    border:1px solid royalblue;
+    margin:0 10px;
+    position:relative;
+    overflow: hidden;
+}
+.btn-ripple .circle{
+    width:100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 100%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%) scale(0);
+    animation-name: myscale;
+    animation-duration: 0.5s;
+    animation-timing-function:ease-in-out;
+}
+.btn-ripple .circle:focus{
+    outline: 0;
+}
+
+@keyframes myscale {
+  to{
+      transform: translate(-50%,-50%) scale(3);
+      opacity: 0;
+  }
+}
